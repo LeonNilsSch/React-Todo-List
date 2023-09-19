@@ -1,38 +1,149 @@
+@font-face {
+  font-family: 'Fielmann Sans';
+  src: url('../fonts/FielmannSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Fielmann Sans', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("/Users/leonnilsschwinkendorf/ToDo Liste/todolist/fonts/Bildschirmfoto 2023-08-14 um 07.52.19.png");
+  background-size: cover;
+  background-position: center;
+}
+
+input[type="datetime-local"] {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  font-family: 'Fielmann Sans', sans-serif;
+}
+
 .App {
   text-align: center;
+  padding: 30px;
+  max-width: 600px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Fielmann Sans', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-family: 'Fielmann Sans', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.task-input {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between; /* Neue Anpassung */
+  margin-bottom: 20px;
+  font-family: 'Fielmann Sans', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  font-family: 'Fielmann Sans', sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  font-family: 'Fielmann Sans', sans-serif;
+  margin-left: 15px; /* Neue Anpassung */
+}
+
+button:hover {
+  background-color: #cecece;
+}
+
+button.edit-button {
+  background-color: #4caf50;
+}
+
+button.edit-button:hover {
+  background-color: #45a049;
+}
+
+button.remove-button {
+  background-color: #20c802;
+}
+
+button.remove-button:hover {
+  background-color: #33a004;
+}
+
+.task-list {
+  list-style: none;
+  font-family: 'Fielmann Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Fielmann Sans', sans-serif;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  
+}
+
+.task-list li span {
+  margin-right: 10px;
+}
+
+
+.todo-content {
+  flex: 1;
+  font-family: 'Fielmann Sans', sans-serif;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+  font-family: 'Fielmann Sans', sans-serif;
+  margin-left: 15px;
+}
+
+input[type="datetime-local"] {
+  flex: 1;
+  padding: 10px;
+  
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  font-family: 'Fielmann Sans', sans-serif;
+  margin-left: 10px; /* Adjust this value to your preference */
 }
